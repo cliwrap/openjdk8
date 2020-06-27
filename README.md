@@ -8,11 +8,11 @@ so that any files created in a volume mount can be created as the user
 and group who initiated `docker run`.  It also has `openjdk8`
 installed.
 
-To download: [`docker pull wtanaka/alpine-37-uid-openjdk8`](https://hub.docker.com/r/wtanaka/alpine-37-uid-openjdk8/)
+To download: [`docker pull cliwrap/openjdk8`](https://hub.docker.com/r/cliwrap/openjdk8/)
 
 Examples
 --------
 
 Run ./gradlew
 
-```docker run --rm -e "HOSTUID=`id -u`" -v "`pwd`:/work" -v "$HOME:/home/hostuser" wtanaka/alpine-37-uid-openjdk8 ./gradlew build```
+```docker run --rm -e "HOSTUID=`id -u`" -v "`pwd`:/work" -v "$HOME:/home/hostuser" cliwrap/openjdk8 ./gradlew build```
